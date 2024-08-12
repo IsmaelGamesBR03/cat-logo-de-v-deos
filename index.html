@@ -1,51 +1,78 @@
+<!DOCTYPE html>
 <html lang="pt-BR">
-
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Página sobre filmes e séries do Homem-Aranha no Aranhaverso">
     <link rel="stylesheet" href="styles.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-        href="https://fonts.googleapis.com/css2?family=Chakra+Petch:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap"
-        rel="stylesheet" />
-    <title>Alura</title>
+    <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+    <title>Alura | Homem-Aranha no Aranhaverso</title>
+    <!-- Inclua a biblioteca Font Awesome para os ícones de redes sociais -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
-
 <body>
     <header>Alura</header>
 
-    <section class="chamada">
-        <div class="chamada-texto">
-            <h1>ATRAVÉS DO ARANHAVERSO</h1>
-            <p>#homem-aranha</p>
-        </div>
+    <main>
+        <!-- Seção principal com gradiente ondulatório -->
+        <section class="chamada animated-wave-background">
+            <div class="chamada-texto">
+                <h1>ATRAVÉS DO ARANHAVERSO</h1>
+                <p>#homem-aranha</p>
+            </div>
 
-        <div>
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/gt_fAE1Eg2Q?si=EEv-tsY_b1B2OwKE"
-                title="YouTube video player" frameborder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            <!-- Vídeo do YouTube incorporado -->
+            <div>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/gt_fAE1Eg2Q?si=EEv-tsY_b1B2OwKE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+        </section>
+
+        <!-- Seção de categorias com vídeos -->
+        <section class="categoria">
+            <h2>Filmes e Séries</h2>
+            <div class="categoria-videos">
+                <!-- Links para vídeos do YouTube com miniaturas -->
+                <a href="https://www.youtube.com/watch?v=cs15QqG6Gjc">
+                    <img src="https://img.youtube.com/vi/cs15QqG6Gjc/maxresdefault.jpg" alt="Homem-Aranha: Filme 1"/>
+                </a>
+                <a href="https://www.youtube.com/watch?v=nCmIwcycUJ8">
+                    <img src="https://img.youtube.com/vi/nCmIwcycUJ8/maxresdefault.jpg" alt="Homem-Aranha: Filme 2"/>
+                </a>
+                <a href="https://www.youtube.com/watch?v=FvRmEapoHRc">
+                    <img src="https://img.youtube.com/vi/FvRmEapoHRc/maxresdefault.jpg" alt="Homem-Aranha: Filme 3"/>
+                </a>
+                <a href="https://www.youtube.com/watch?v=Ipkw_hWW-Hw">
+                    <img src="https://img.youtube.com/vi/Ipkw_hWW-Hw/maxresdefault.jpg" alt="Homem-Aranha: Filme 4"/>
+                </a>
+                <a href="https://www.youtube.com/watch?v=d4DzMNGoyis">
+                    <img src="https://img.youtube.com/vi/d4DzMNGoyis/maxresdefault.jpg" alt="Homem-Aranha: Filme 5"/>
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <!-- Rodapé com gradiente e links de redes sociais -->
+    <footer class="footer animated-gradient-background">
+        <div class="footer-content">
+            <div>
+                <p>&copy; 2024 Alura. Todos os direitos reservados.</p>
+                <p><a href="mailto:contato@alura.com">contato@alura.com</a></p>
+            </div>
+            <div class="social-icons">
+                <!-- Ícones de redes sociais -->
+                <a href="https://facebook.com" target="_blank" rel="noopener noreferrer">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+                <a href="https://twitter.com" target="_blank" rel="noopener noreferrer">
+                    <i class="fab fa-twitter"></i>
+                </a>
+                <a href="https://instagram.com" target="_blank" rel="noopener noreferrer">
+                    <i class="fab fa-instagram"></i>
+                </a>
+            </div>
         </div>
-    </section>
-    <section class="categoria">
-        <h2>Filmes e Séries</h2>
-        <div class="categoria-videos">
-            <a href="https://www.youtube.com/watch?v=cs15QqG6Gjc">
-                <img src="https://img.youtube.com/vi/cs15QqG6Gjc/maxresdefault.jpg" />
-            </a>
-            <a href="https://www.youtube.com/watch?v=nCmIwcycUJ8">
-                <img src="https://img.youtube.com/vi/nCmIwcycUJ8/maxresdefault.jpg" />
-            </a>
-            <a href="https://www.youtube.com/watch?v=FvRmEapoHRc">
-                <img src="https://img.youtube.com/vi/FvRmEapoHRc/maxresdefault.jpg" />
-            </a>
-            <a href="https://www.youtube.com/watch?v=Ipkw_hWW-Hw">
-                <img src="https://img.youtube.com/vi/Ipkw_hWW-Hw/maxresdefault.jpg" />
-            </a>
-            <a href="https://www.youtube.com/watch?v=d4DzMNGoyis">
-                <img src="https://img.youtube.com/vi/d4DzMNGoyis/maxresdefault.jpg" />
-            </a>
-        </div>
-    </section>
+    </footer>
 </body>
-
 </html>
