@@ -1,61 +1,157 @@
+/* Variáveis de Cores */
+:root {
+  --primary-color: rgb(0, 255, 255); /* Cor principal usada em bordas e links */
+  --secondary-color: #4c00ff;        /* Cor secundária para efeitos */
+  --gradient-start: #330867;         /* Início do gradiente (roxo escuro) */
+  --gradient-end: #30CFD0;           /* Fim do gradiente (azul claro) */
+}
+
+/* Estilos Globais */
 body {
-    color: white;
-    background: black;
-    margin: 0px;
-    font-family: "Chakra Petch", sans-serif;
-    margin-bottom: 100px;
+  color: white;
+  background: black;
+  margin: 0;
+  font-family: "Chakra Petch", sans-serif;
+  margin-bottom: 100px;
+  text-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+}
+
+/* Estilo do Cabeçalho */
+header {
+  border-bottom: 5px solid var(--primary-color);
+  padding: 20px;
+  font-size: 64px;
+  color: var(--primary-color);
+  text-align: left;
+}
+
+/* Gradiente ondulatório na seção "ATRAVÉS DO ARANHAVERSO" */
+.animated-wave-background {
+  background: linear-gradient(270deg, var(--gradient-start), var(--gradient-end));
+  background-size: 400% 400%; /* Tamanho do gradiente para permitir a animação */
+  animation: waveAnimation 15s ease infinite, waveMove 14s ease-in-out infinite;
+  padding: 80px 20px;
+  display: flex;
+  justify-content: center;
+  border-bottom: 5px solid var(--primary-color);
+  border-top: 5px solid var(--primary-color);
+}
+
+/* Animação do gradiente ondulatório */
+@keyframes waveAnimation {
+  0%, 100% {
+      background-position: 0% 50%;
   }
-  
-  header {
-    border-bottom: solid 2px rgb(42, 122, 228);
-    padding: 20px;
-    font-size: 32px;
-    color: rgb(42, 122, 228);
+  50% {
+      background-position: 100% 50%;
   }
-  
+}
+
+/* Animação de movimento vertical para criar o efeito de ondulação */
+@keyframes waveMove {
+  0% {
+      transform: translateY(0);
+  }
+  50% {
+      transform: translateY(-15px); /* Aumente ou diminua este valor para ajustar a ondulação */
+  }
+  100% {
+      transform: translateY(0);
+  }
+}
+
+/* Texto da seção "ATRAVÉS DO ARANHAVERSO" */
+.chamada-texto {
+  margin-right: 5%;
+}
+
+h1 {
+  font-size: 40px;
+}
+
+p {
+  font-size: 20px;
+}
+
+/* Responsividade para dispositivos móveis */
+@media (max-width: 768px) {
   .chamada {
-    background: rgb(184, 156, 213);
-    padding-bottom: 80px;
-    padding-top: 80px;
-    display: flex;
-    justify-content: center;
-  }
-  
-  .chamada-texto {
-    margin-right: 5%;
-  }
-  
-  h1 {
-    font-size: 40px;
-  }
-  
-  p {
-    font-size: 20px;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
   }
 
-  .categoria-videos {
-    display: flex;
-    overflow-x: auto;
-    gap: 10px;
+  iframe {
+      width: 100%;
+      height: auto;
   }
+}
 
-  .categoria {
-    padding-left: 20px;
-    padding-right: 20px;
-    margin-top: 50px;
-  }
+/* Estilos da seção de vídeos */
+.categoria-videos {
+  display: flex;
+  overflow-x: auto;
+  gap: 10px; /* Espaçamento entre as miniaturas */
+}
 
-  .categoria-videos img {
-    opacity: 0.5;
-    height: 200px;
-  }
+.categoria {
+  padding: 20px;
+  margin-top: 50px;
+}
 
-  .categoria-videos img:hover {
-    opacity: 1.0;
-    border: 1px solid green;
-  }
+/* Efeito nas miniaturas de vídeos */
+.categoria-videos img {
+  opacity: 0.5;
+  height: 200px;
+  transform: scale(1);
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
 
-  .categoria h2 {
-    color: rgb(42, 122, 228)
-  }
+/* Efeito ao passar o mouse nas miniaturas */
+.categoria-videos img:hover {
+  opacity: 1.0;
+  border: 1px solid var(--primary-color);
+  transform: scale(1.1); /* Aumenta ligeiramente a miniatura */
+}
+
+/* Cor do texto da seção de categorias */
+.categoria h2 {
+  color: var(--primary-color);
+}
+
+/* Agora igual ao gradiente da seção "ATRAVÉS DO ARANHAVERSO" */
+.animated-gradient-background {
+  background: linear-gradient(270deg, var(--gradient-start), var(--gradient-end));
+  background-size: 400% 400%;
+  animation: waveAnimation 15s ease infinite, waveMove 14s ease-in-out infinite;
+  position: relative;
+  padding: 40px 20px;
+  border-top: 2px solid var(--primary-color);
+  border-bottom: 2px solid var(--primary-color);
+}
+
+/* Estilo dos ícones de redes sociais */
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.social-icons {
+  display: flex;
+  gap: 15px; /* Espaçamento entre os ícones */
+}
+
+.social-icons i {
+  font-size: 64px; /* Ajuste o tamanho dos ícones */
+  color: white; /* Cor dos ícones, ajuste conforme necessário */
+  transition: color 0.3s ease, transform 0.3s ease; /* Adiciona transição suave */
+}
+
+.social-icons i:hover {
+  color: var(--primary-color); /* Cor ao passar o mouse, ajuste conforme necessário */
+  transform: scale(1.5); /* Aumenta o tamanho do ícone ao passar o mouse */
+}
+
   
